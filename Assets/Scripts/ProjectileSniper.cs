@@ -16,12 +16,12 @@ public class ProjectileSniper : MonoBehaviour
 
         if (inSights && !wasInLOS)
         {   
-            Debug.Log("IN CONE");
+            Debug.Log("IN LOS");
             projectileParticles.Play();
         }
         else if (!inSights && wasInLOS)     
         {   
-            Debug.Log("NOT IN CONE");
+            Debug.Log("NOT IN LOS");
             projectileParticles.Stop();
         }
 

@@ -18,16 +18,13 @@ public class TurretCone : MonoBehaviour
     {   
         Vector2 dir = player.position- transform.position;
 
-        if (dir.magnitude > range)
-            return false;
+        if (dir.magnitude > range) return false;
 
         float pAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         float tAngle = transform.eulerAngles.z;
 
-        float delta = Mathf.Abs(
-            Mathf.DeltaAngle(   
-            tAngle, pAngle));
+        float delta = Mathf.Abs(Mathf.DeltaAngle(tAngle, pAngle));
 
         return delta <= coneAngle/2f;
     }

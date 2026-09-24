@@ -10,9 +10,7 @@ public class ProjectileDetection : MonoBehaviour
 
     void Start()
     {
-        particles = new ParticleSystem.Particle[
-            _particleSystem.main.maxParticles
-        ];
+        particles = new ParticleSystem.Particle[ _particleSystem.main.maxParticles ];
     }
 
     void Update()
